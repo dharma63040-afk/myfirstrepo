@@ -36,4 +36,4 @@ with DAG(
 
     end = EmptyOperator(task_id="end")
 
-    start >> load_csv_to_bq >> end
+    end << load_csv_to_bq << start
